@@ -1,7 +1,6 @@
 var path = require('path');
 var express = require('express');
 const app = express();
-const PORT = 3000;
 
 app.set('view engine', 'ejs');
 
@@ -11,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(PORT, (err) => {
+app.listen(process.env.PORT || 3000, (err) => {
   if (err) {
     console.log(err);
   }
