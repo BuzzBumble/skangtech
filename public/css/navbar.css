@@ -1,0 +1,95 @@
+.navbar {
+  position: fixed;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 5% 0 5%;
+  align-content: center;
+}
+
+.navbar .inactive {
+  visibility: hidden;  
+}
+
+.navbar a {
+  color: grey;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+.navbar > ul {
+  width: 40%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  width: 25%;
+  flex-wrap: wrap;
+}
+
+.bubbles {
+  display: inline-block;
+}
+
+.nav-links a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bubbles div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: grey;
+  display: block;
+  margin: 3px auto;
+}
+
+.bubbles div:first-child {
+  margin-top: 0;
+}
+
+.bubbles div:last-child {
+  margin-bottom: 0;
+}
+
+.nav-links a:hover .bubbles div {
+  background-color: black;
+}
+
+.links {
+  width: 100%;
+  transition: all 1s ease;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+}
+
+.links a {
+  margin: 30px auto;
+}
+
+.links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.links.drop {
+  visibility: visible;
+  opacity: 1;
+  max-height: 200px;
+}
+
+.links img {
+  width: 30%;
+  height: 30%;
+  margin: 0 auto;
+}
