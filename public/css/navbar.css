@@ -1,14 +1,16 @@
 .navbar {
-  position: fixed;
-  width: 90%;
+  position: relative;
+  width: 100%;
+  height: 5%;
   display: flex;
   justify-content: space-between;
-  margin: 15px 5% 0 5%;
   align-content: center;
+  padding: 5px 20px;
 }
 
-.navbar .inactive {
+.inactive {
   visibility: hidden;  
+  opacity: 0;
 }
 
 .navbar a {
@@ -66,7 +68,7 @@
 
 .links {
   width: 100%;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   visibility: hidden;
   opacity: 0;
   max-height: 0;
@@ -92,4 +94,8 @@
   width: 30%;
   height: 30%;
   margin: 0 auto;
+}
+
+.navbar h1 a {
+  transition: all 0.25s ease;
 }
