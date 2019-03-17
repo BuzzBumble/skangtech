@@ -25,11 +25,25 @@ body, html{
   margin: 0;
 }
 
+.container {
+  height: 90%;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
 .header-container {
   height: 100%;
   width: 100%;
   text-align: center;
   display: flex;
+  padding-top: 150px;
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -94,6 +108,38 @@ body, html{
   color: grey;
 }
 
+.projects-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+}
+
+.content-container {
+  height: 100%;
+  width: 100%;
+  transition: all 0.40s ease;
+  display: flex;
+  align-content: flex-start;
+  box-sizing: border-box;
+}
+
+.vishidden {
+  opacity: 0;
+}
+
+.dispnone {
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
 @media only screen and (max-width: 640px;) {
-  
+    
 }

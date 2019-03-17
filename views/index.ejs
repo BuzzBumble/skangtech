@@ -5,33 +5,18 @@
     <link rel="shortcut icon" href="icons/favicon.ico"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/projects.css"/>
   </head>
   <body>
     <script src="vendor/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <%- include('navbar') -%>
-    <div class="header-container">
-      <div class="header">
-        <h1>Steven Kang</h1>
-        <div class="aspiring-container">
-          <h5>An aspiring</h5>
-          <div class="aspiring"><span class="asp-content"></span></div>
-        </div>
+    <div class="container">
+      <div class="content-container header-container active-container">
+        <%- include('header') -%>
       </div>
-      <div class="and">
-        and
-      </div>
-      <div class="bios">
-        <ul>
-          <li>
-            <strong>Full-stack Developer</strong> currently living in beautiful British Columbia
-          </li>
-          <li>
-            <strong>Student</strong> pursuing a Computer Systems Technology Diploma at the British Columbia Institute of Technology
-          </li>
-          <li>
-            <strong>Graduate</strong> of <a href="https://www.lighthouselabs.ca/">Lighthouse Labs</a>' full-time web development bootcamp
-        </ul>
+      <div class="content-container projects-container dispnone vishidden">
+        <%- include('projects') -%>
       </div>
     </div>
     <script src="javascripts/index.js"></script>
