@@ -1,31 +1,44 @@
+<link rel="stylesheet" href="css/navbar.css"/>
 <div class="navbar-container">
   <div class="navbar">
-    <h1><a href="#header" class="inactive">Steven Kang</a></h1>
+    <a href="#header" class="header-icon nav-item inactive nav-s">
+      <i class="fas fas-home">
+      </i>
+    </a>
+    <h1 class="nav-item nav-l inactive nav-item">
+      <a href="#header">
+        Steven Kang
+      </a>
+    </h1>
+    <!-- 
+      <a href="#header" class="nav-s inactive nav-item"><i class="fas fas-home"></i></a>
+      <a href="#header"><h1 class="nav-item nav-l inactive">Steven Kang</h1></a>
+    -->
     <ul>
+      <li class="nav-item nav-about">
+        <a href="#about">About</a>
+      </li>
       <li class="nav-item nav-projects">
         <a href="#projects">Projects</a>
       </li>
-      <li class="nav-item nav-blog">
-        <a href="#blog">Blog</a>
-      </li>
       <li class="nav-item nav-links">
         <a href="#links">My Links
-          <div class="bubbles">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
         </a>
         <div class="links">
           <ul>
             <li>
               <a target="_blank" href="https://www.linkedin.com/in/steven-kang-531b28125/" alt="LinkedIn">
-                <img src="icons/linkedin.svg"></img>
+                <img src="icons/linkedin.svg" onload="SVGInject(this)"></img>
               </a>
             </li>
             <li>
               <a target="_blank" href="https://github.com/buzzbumble" alt="Github">
-                <img src="icons/github.svg"></img>
+                <img src="icons/github.svg" onload="SVGInject(this)"></img>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://medium.com/@s.kang919" alt="Medium">
+                <img src="icons/medium.svg" onload="SVGInject(this)"></img>
               </a>
             </li>
           </ul>

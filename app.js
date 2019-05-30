@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(process.env.PORT || 3000, (err) => {
+app.listen(process.env.PORT || 8000, (err) => {
   if (err) {
     console.log(err);
   }
