@@ -1,15 +1,24 @@
+<link rel="stylesheet" href="css/projects.css">
 <div class="projects-content">
-  <div class="projects-sidebar">
-    <ul>
-      <li class="project-item selected">
-        <div class="games-i-play">
-          <img src="images/games-i-play.png"></img>
-          <span>Games I Play</span>
-        </div>
-      </li>
-    </ul>
+  <div class="project-item games-i-play">
+    <a target="_blank" href="http://games-i-play.herokuapp.com">
+      <img src="images/games-i-play.png" alt="Games I Play"></img>
+      <p>Games I Play</p>
+    </a>
   </div>
-  <div class="projects-info">
-    <%- include('projects/games-i-play.ejs') -%>
+  <div class="project-item portfolio">
+    <a href="#projects">
+      <img src="images/Portfolio.png" alt="You're already here!"></img>
+      <p>Portfolio</p>
+    </a>
+  </div>
+  <div class="project-item oneday">
+    <a target="_blank" href="https://github.com/BuzzBumble/oneday">
+      <img src="images/oneday.png" alt="One Day"></img>
+      <p>
+        One Day
+      </p>
+      <p class="construction">(Work in Progress)</p>
+    </a>
   </div>
 </div>
