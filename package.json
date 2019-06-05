@@ -7,11 +7,12 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "npx node-sass --output-style compressed public/scss/ --recursive --output public/css --watch"
+    "scss": "npx  node-sass --compressed --watch public/scss/style.scss --output public/css/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bulma": "^0.7.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4"
   },

@@ -7,21 +7,9 @@
   </head>
   <body>
     <script src="vendor/jquery.min.js"></script>
-    <script src="vendor/svg-inject.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <%- include('navbar') -%>
-    <div class="container">
-      <div class="content-container header-container active-container">
-        <%- include('header') -%>
-      </div>
-      <div class="content-container projects-container dispnone vishidden">
-        <%- include('projects') -%>
-      </div>
-      <div class="content-container about-container dispnone vishidden">
-        <%- include('about') -%>
-      </div>
-    </div>
-    <link rel="stylesheet" href="css/hide.css">
+    <%- include('header') -%>
+    <%- include('about') -%>
     <script src="javascripts/index.js"></script>
   </body>
 </html>
