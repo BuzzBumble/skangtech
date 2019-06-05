@@ -1,4 +1,58 @@
-<link rel="stylesheet" href="/css/about.css">
-<div class="about-content">
-  <h1>Under Construction</h1>
-</div>
+<section class="about-section section">
+  <div class="container">
+    <div id="about-1" class="columns is-8 is-variable">
+      <div id="about-1-1" class="column">
+        <h3 class="title is-3 has-text-weight-bold">
+          Who I Am
+        </h3>
+        <p>
+        A full-stack developer with a passion for problem-solving and personal growth
+        </p>
+        <p>
+        <br>
+        My biggest interest lies in learning and challenging myself in new and interesting ways. Software Development is my medium for applying that interest and giving back by contributing to products I believe in.
+        </p>
+      </div>
+      <div id="about-1-2" class="column">
+        <h3 class="title is-3 has-text-weight-bold">
+          What I Do
+        </h3>
+        <%- include('_skill_tabs') -%>
+      </div>
+    </div>
+    <div id="about-2" class="columns">
+      <div id="about-2-1" class="column is-three-fifths">
+        <h3 class="title is-3 has-text-weight-bold">
+          Stuff I've Written
+        </h3>
+        <div class="columns is-mobile is-multiline">
+          <% for (let i = 0; i < cards.length; i++) { %>
+          <%- include('_card', {c: cards[i]}) -%>
+          <% } %>
+        </div>
+      </div>
+      <div id="about-2-2" class="column is-narrow is-two-fifths">
+        <h3 class="title is-3 has-text-centered has-text-weight-bold">
+          Where to Find Me
+        </h3>
+        <div class="list has-text-weight-semibold">
+          <a class="list-item" href="https://www.linkedin.com/in/steven-kang-531b28125/">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a class="list-item" href="https://github.com/BuzzBumble">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a class="list-item" href="https://medium.com/@s.kang919">
+            <i class="fab fa-medium"></i> Medium
+          </a>
+          <a class="list-item" href="https://www.instagram.com/buzzbumblegram/">
+            <i class="fab fa-insta"></i> Instagram
+          </a>
+          <a class="list-item"href="mailto:s.kang919@gmail.com">
+            <i class="fas fa-mail"></i> s.kang919@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
