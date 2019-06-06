@@ -4,11 +4,11 @@
  */
 .fa,
 .fas,
-.about-section #about-2-2 .list a .fas,
+.about-section #about-3 .list a .fas,
 .far,
 .fal,
 .fab,
-.about-section #about-2-2 .list a .fab {
+.about-section #about-3 .list a .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -17,7 +17,7 @@
   text-rendering: auto;
   line-height: 1; }
 
-.about-section #about-2-2 .list a .fab, .about-section #about-2-2 .list a .fas {
+.about-section #about-3 .list a .fab, .about-section #about-3 .list a .fas {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -98,20 +98,20 @@
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.about-section #about-2-2 .list a .fa-pull-left.fas,
+.about-section #about-3 .list a .fa-pull-left.fas,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
-.about-section #about-2-2 .list a .fa-pull-left.fab {
+.about-section #about-3 .list a .fa-pull-left.fab {
   margin-right: .3em; }
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.about-section #about-2-2 .list a .fa-pull-right.fas,
+.about-section #about-3 .list a .fa-pull-right.fas,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
-.about-section #about-2-2 .list a .fa-pull-right.fab {
+.about-section #about-3 .list a .fa-pull-right.fab {
   margin-left: .3em; }
 
 .fa-spin {
@@ -4311,7 +4311,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
-.about-section #about-2-2 .list a .fas {
+.about-section #about-3 .list a .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
@@ -4329,7 +4329,7 @@ readers do not read off random characters that represent icons */
 
 
 .fab,
-.about-section #about-2-2 .list a .fab {
+.about-section #about-3 .list a .fab {
   font-family: 'Font Awesome 5 Brands'; }
 
 /*!
@@ -4338,11 +4338,11 @@ readers do not read off random characters that represent icons */
  */
 .fa,
 .fas,
-.about-section #about-2-2 .list a .fas,
+.about-section #about-3 .list a .fas,
 .far,
 .fal,
 .fab,
-.about-section #about-2-2 .list a .fab {
+.about-section #about-3 .list a .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -4351,7 +4351,7 @@ readers do not read off random characters that represent icons */
   text-rendering: auto;
   line-height: 1; }
 
-.about-section #about-2-2 .list a .fab, .about-section #about-2-2 .list a .fas {
+.about-section #about-3 .list a .fab, .about-section #about-3 .list a .fas {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -4432,20 +4432,20 @@ readers do not read off random characters that represent icons */
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.about-section #about-2-2 .list a .fa-pull-left.fas,
+.about-section #about-3 .list a .fa-pull-left.fas,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
-.about-section #about-2-2 .list a .fa-pull-left.fab {
+.about-section #about-3 .list a .fa-pull-left.fab {
   margin-right: .3em; }
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.about-section #about-2-2 .list a .fa-pull-right.fas,
+.about-section #about-3 .list a .fa-pull-right.fas,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
-.about-section #about-2-2 .list a .fa-pull-right.fab {
+.about-section #about-3 .list a .fa-pull-right.fab {
   margin-left: .3em; }
 
 .fa-spin {
@@ -8645,7 +8645,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
-.about-section #about-2-2 .list a .fas {
+.about-section #about-3 .list a .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
@@ -8663,7 +8663,7 @@ readers do not read off random characters that represent icons */
 
 
 .fab,
-.about-section #about-2-2 .list a .fab {
+.about-section #about-3 .list a .fab {
   font-family: 'Font Awesome 5 Brands'; }
 
 #header-hero .title {
@@ -8678,11 +8678,11 @@ readers do not read off random characters that represent icons */
  */
 .fa,
 .fas,
-.about-section #about-2-2 .list a .fas,
+.about-section #about-3 .list a .fas,
 .far,
 .fal,
 .fab,
-.about-section #about-2-2 .list a .fab {
+.about-section #about-3 .list a .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -8691,7 +8691,7 @@ readers do not read off random characters that represent icons */
   text-rendering: auto;
   line-height: 1; }
 
-.about-section #about-2-2 .list a .fab, .about-section #about-2-2 .list a .fas {
+.about-section #about-3 .list a .fab, .about-section #about-3 .list a .fas {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -8772,20 +8772,20 @@ readers do not read off random characters that represent icons */
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.about-section #about-2-2 .list a .fa-pull-left.fas,
+.about-section #about-3 .list a .fa-pull-left.fas,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
-.about-section #about-2-2 .list a .fa-pull-left.fab {
+.about-section #about-3 .list a .fa-pull-left.fab {
   margin-right: .3em; }
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.about-section #about-2-2 .list a .fa-pull-right.fas,
+.about-section #about-3 .list a .fa-pull-right.fas,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
-.about-section #about-2-2 .list a .fa-pull-right.fab {
+.about-section #about-3 .list a .fa-pull-right.fab {
   margin-left: .3em; }
 
 .fa-spin {
@@ -12985,7 +12985,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
-.about-section #about-2-2 .list a .fas {
+.about-section #about-3 .list a .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
@@ -13003,7 +13003,7 @@ readers do not read off random characters that represent icons */
 
 
 .fab,
-.about-section #about-2-2 .list a .fab {
+.about-section #about-3 .list a .fab {
   font-family: 'Font Awesome 5 Brands'; }
 
 .about-section {
@@ -13037,34 +13037,32 @@ readers do not read off random characters that represent icons */
     padding: 0.5em;
     margin-bottom: auto;
     background-color: #333333; }
+    .about-section #about-2-1 .media-content .title {
+      color: #B3B8BE; }
     .about-section #about-2-1 .media-content a:hover {
       text-decoration: underline;
       text-decoration-color: #53D273; }
-    .about-section #about-2-1 .media-content .pub {
-      background-color: white;
-      padding: 0 1em;
-      margin: 1em 0; }
-    .about-section #about-2-1 .media-content .subtitle {
-      margin-top: 1em; }
-  .about-section #about-2-2 .title {
-    color: #EA5065; }
-  .about-section #about-2-2 .list {
-    margin: 0 auto;
-    width: 75%; }
-    .about-section #about-2-2 .list a {
+  .about-section #about-3 {
+    margin-top: 5em; }
+    .about-section #about-3 .title {
       color: #EA5065; }
-      .about-section #about-2-2 .list a:hover {
-        color: black; }
-      .about-section #about-2-2 .list a .fa-linkedin.fab:before {
-        content: "\f08c"; }
-      .about-section #about-2-2 .list a .fa-github.fab:before {
-        content: "\f09b"; }
-      .about-section #about-2-2 .list a .fa-medium.fab:before {
-        content: "\f23a"; }
-      .about-section #about-2-2 .list a .fa-insta.fab:before {
-        content: "\f16d"; }
-      .about-section #about-2-2 .list a .fa-mail.fas:before {
-        content: "\f0e0"; }
+    .about-section #about-3 .list {
+      margin: 0 auto;
+      width: 75%; }
+      .about-section #about-3 .list a {
+        color: #EA5065; }
+        .about-section #about-3 .list a:hover {
+          color: black; }
+        .about-section #about-3 .list a .fa-linkedin.fab:before {
+          content: "\f08c"; }
+        .about-section #about-3 .list a .fa-github.fab:before {
+          content: "\f09b"; }
+        .about-section #about-3 .list a .fa-medium.fab:before {
+          content: "\f23a"; }
+        .about-section #about-3 .list a .fa-insta.fab:before {
+          content: "\f16d"; }
+        .about-section #about-3 .list a .fa-mail.fas:before {
+          content: "\f0e0"; }
 
 @font-face {
   font-family: "Roboto";
