@@ -1,20 +1,14 @@
-<div class="card column is-one-third">
+<div class="card column is-one-quarter">
   <div class="card-image">
     <figure class="image is-4by3">
-      <img src=<%= c.image %>>
+      <img src=<%= c.thumbnail %>>
     </figure>
   </div>
   <div class="media-content">
-    <a target="_blank" href=<%= c.url %>>
+    <a target="_blank" href=<%= c.link %>>
       <p class="card-title title is-4 is-size-6-touch">
       <%= c.title %>
       </p>
     </a>
-    <p class="subtitle is-6 is-hidden-touch">
-    <%= c.subtitle %>
-    </p>
-    <% if (c.pub) { %>
-    <img class="pub" src=<%= c.pub %>>
-    <% } %>
   </div>
 </div>
