@@ -4344,6 +4344,9 @@ readers do not read off random characters that represent icons */
     margin-bottom: 2em; }
     .about-section #about-1-1 .title {
       color: #46BDDF; }
+    .about-section #about-1-1 .self-photo {
+      float: left;
+      margin-right: 2vw; }
   .about-section #about-1-2 .title {
     color: #E57254; }
   .about-section #about-1-2 .container {
