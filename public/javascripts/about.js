@@ -8,7 +8,6 @@ $(function() {
     setTimeout(() => {
 
       $('#about-selection').addClass('dispnone');
-      console.log("hid the thing");
 
     }, 500);
 
