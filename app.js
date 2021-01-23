@@ -18,5 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(process.env.PORT || 8000, (err) => {
   if (err) {
     console.log(err);
+  } else {
+    console.log(`Port ${process.env.PORT || 8000}`);
   }
 });
