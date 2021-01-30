@@ -4,16 +4,26 @@ const app = express();
 const axios = require('axios');
 const favicon = require('serve-favicon');
 
-app.set('view engine', 'ejs');
+const mediumURL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@s.kang919'
 
-app.get('/', (req, res) => {
-  axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@s.kang919')
+const themes = {
+  simpledark: 'simple-dark',
+  pixel: 'pixel',
+};
+
+const default_theme = 'simpledark';
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', async (req, res) => {
+  const theme = req.query.theme ? req.query.theme : default_theme;
+  axios.get(mediumURL)
     .then((data) => {
-      res.render('index', {cards: data.data.items});
+      res.render(`${themes[theme]}/index`, {cards: data.data.items});
     });
 });
-
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(process.env.PORT || 8000, (err) => {
   if (err) {
