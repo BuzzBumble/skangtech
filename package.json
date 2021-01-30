@@ -7,7 +7,6 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "npx  node-sass --compressed --watch public/scss/style.scss --output public/css/",
     "sass": "npx sass --watch public/styles/themes/pixel/:public/styles/css/"
   },
   "author": "",
