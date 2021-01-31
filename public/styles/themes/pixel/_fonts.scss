@@ -1,4 +1,26 @@
+// Fonts for use across the 'pixel' theme
+//
+// Font Faces:
+//  f_pressStart  - Press Start 2P
+//  f_04b03       - 04B_03
+
+$family_pressStart: 'Press Start 2P';
+$family_04b03: '04B_03';
+
+@mixin f_pressStart {
+  font-family: $family_pressStart;
+}
+
+@mixin f_04b03 {
+  font-family: $family_04b03;
+}
+
 @font-face {
-  font-family: 'Press Start 2P';
+  font-family: $family_pressStart;
   src: url("../fonts/PressStart2P-Regular.ttf");
+}
+
+@font-face {
+  font-family: $family_04b03;
+  src: url("../fonts/f_04B03.woff");
 }

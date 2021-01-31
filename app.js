@@ -19,9 +19,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async (req, res) => {
   const theme = req.query.theme ? req.query.theme : default_theme;
+  let cards;
   axios.get(mediumURL)
     .then((data) => {
-      res.render(`${themes[theme]}/index`, {cards: data.data.items});
+      cards = data.data.items;
+      res.render(`${themes[theme]}/index`, {cards});
+    }).catch((err) => {
+      cards = [];
+      res.render(`${themes[theme]}/index`, {cards});
     });
 });
 

@@ -1,0 +1,39 @@
+@use 'vars';
+// For general-purpose classes
+//
+// _01 - Containing Elements
+// _02 - Default Overrides
+// _03 - Alignment
+
+// _01 Containing Elements
+.container { 
+  padding: vars.$container-padding;
+  box-sizing: border-box;
+}
+
+// _02 Default Overrides
+ul.no-bullet, ol.nobullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// _03 Alignment
+
+.text-center {
+  text-align: center;
+}
+
+.centered-vert {
+  display: block;
+  margin: auto 0;
+}
+
+.centered-hor {
+  display: block;
+  margin: 0 auto;
+}
+
+.centered {
+  display: block;
+  margin: auto;
+}

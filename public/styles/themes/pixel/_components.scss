@@ -1,0 +1,90 @@
+@use 'images';
+// Reusable components
+
+// Menu Container
+// $items : Number of items
+// $item-selector : selector for item elements
+// $item-padding : how much vertical space between the items
+// $left-align : (true) align items to left, else aligns to right
+// $start-padding : (0px) padding at start of menu
+@mixin menu-container ($item-selector, $item-padding: 10px, $left-align: true, $start-padding: 0px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 80%;
+  height: 100%;
+  @if $left-align {
+    padding-right: 0;
+    padding-left: $start-padding;
+  } @else {
+    padding-left: 0;
+    padding-right: $start-padding;
+  }
+  
+  #{$item-selector} {
+    @include menu-selection($item-padding);
+  }
+}
+
+@mixin menu-selection ($item-padding) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: $item-padding 0;
+  height: auto;
+
+  &.selected {
+    border: solid 2px;
+    border-color: black;
+  }
+}
+
+@mixin parallax-scene ($background-selector, $buildings-far-selector, $buildings-near-selector) {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  image-rendering: crisp-edges;
+
+  $background: $background-selector;
+  $buildings-far: $buildings-far-selector;
+  $buildings-near: $buildings-near-selector;
+
+  #{$background, $buildings-far, $buildings-near} {
+    width: 100%;
+    height: 100%;
+  }
+
+  #{$background} {
+    @include skyline-background;
+  }
+
+  #{$buildings-far} {
+    @include buildings-far;
+  }
+
+  #{$buildings-near} {
+    @include buildings-near;
+  }
+}
+
+@mixin skyline-background {
+  background: url(images.$bg_skyline_a) repeat-x;
+  background-position: center 180%;
+  background-size: auto 120%;
+  background-color: #031B70;
+}
+
+@mixin buildings-far {
+  background: url(images.$bg_buildings_far) repeat-x;
+  background-position: center bottom;
+  background-size: auto 60%;
+}
+
+@mixin buildings-near {
+  background: url(images.$bg_buildings_near) repeat-x;
+  background-position: center 100%;
+  background-size: auto 70%;
+}

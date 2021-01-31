@@ -1,0 +1,11 @@
+$warped_base_url: '../../images/warped_assets/';
+
+$warped_bg_url: $warped_base_url + 'background/';
+
+$warped_player_url: $warped_base_url + 'player/';
+$player_idle_url: $warped_player_url + 'idle/';
+
+$bg_buildings_far: $warped_bg_url + 'buildings-bg.png';
+$bg_buildings_near: $warped_bg_url + 'near-buildings-bg.png';
+$bg_skyline_a: $warped_bg_url + 'skyline-a.png';
+$bg_skyline_b: $warped_bg_url + 'skyline-b.png';
