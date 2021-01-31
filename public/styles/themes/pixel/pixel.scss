@@ -3,6 +3,7 @@
 @use 'classes';
 @use 'components';
 @use 'media';
+@use 'images';
 
 html, body {
   margin: 0;
@@ -14,16 +15,17 @@ html, body {
 
 #scene {
   z-index: -1;
-  @include components.parallax-scene ("#background", "#buildings-far", "#buildings-near");
+  @include components.parallax-scene;
 }
 
 #index-container {
+  pointer-events: none;
   margin: 0;
   width: 100%;
   height: 100%;
 
   display: grid;
-  grid-template-columns: 1fr [hero-col-start] 3fr 1fr;
+  grid-template-columns: [hero-col-start] 1fr 5fr;
   grid-template-rows: 1fr [hero-row-start] 3fr 1fr;
 
   #index-hero {
@@ -33,10 +35,9 @@ html, body {
     grid-column-start: hero-col-start;
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
 
     #hero-header {
-      margin-bottom: 1em;
 
       .header-title {
         font-size: 6.5em;
@@ -75,3 +76,4 @@ html, body {
     }
   }
 }
+

@@ -35,6 +35,10 @@ ul.no-bullet, ol.nobullet {
   margin: auto;
 }
 
+.lit {
+  filter: brightness(1.5);
+}
+
 html, body {
   margin: 0;
   width: 100%;
@@ -72,13 +76,67 @@ html, body {
   background-position: center 100%;
   background-size: auto 70%;
 }
+#scene #main-menu {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#scene #main-menu #menu-building {
+  position: absolute;
+  right: 20%;
+  width: 348px;
+  height: 645px;
+  bottom: 20px;
+  background: url("../../images/warped_assets/background/menu-building.png") no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+#scene #main-menu #menu-building #enter-sign {
+  position: absolute;
+  top: 127.5px;
+  left: 0;
+  width: 93px;
+  height: 358.5px;
+  background: url("../../images/warped_assets/background/enter-sign.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 5;
+  pointer-events: auto;
+}
+#scene #main-menu #menu-building #enter-sign:hover {
+  filter: brightness(1.5);
+  -webkit-box-shadow: 0 0 50px #fff844;
+  box-shadow: 0 0 50px #fff844;
+}
+#scene #main-menu #menu-building #themes-sign, #scene #main-menu #menu-building #themes-sign-blur {
+  pointer-events: auto;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 240px;
+  height: 46.5px;
+  background: url("../../images/warped_assets/background/themes-sign.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#scene #main-menu #menu-building #themes-sign:hover {
+  filter: brightness(2);
+}
+#scene #main-menu #menu-building #themes-sign:hover + #themes-sign-blur {
+  background-position: center right;
+  -webkit-box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
+  box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
+  filter: blur(10px);
+  z-index: -1;
+}
 
 #index-container {
+  pointer-events: none;
   margin: 0;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr [hero-col-start] 3fr 1fr;
+  grid-template-columns: [hero-col-start] 1fr 5fr;
   grid-template-rows: 1fr [hero-row-start] 3fr 1fr;
 }
 #index-container #index-hero {
@@ -86,10 +144,7 @@ html, body {
   grid-row-start: hero-row-start;
   grid-column-start: hero-col-start;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-#index-container #index-hero #hero-header {
-  margin-bottom: 1em;
+  grid-template-rows: 2fr 1fr;
 }
 #index-container #index-hero #hero-header .header-title {
   font-size: 6.5em;

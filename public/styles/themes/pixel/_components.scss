@@ -40,7 +40,7 @@
   }
 }
 
-@mixin parallax-scene ($background-selector, $buildings-far-selector, $buildings-near-selector) {
+@mixin parallax-scene {
   position: absolute;
   top: -10%;
   left: -10%;
@@ -48,9 +48,9 @@
   height: 120%;
   image-rendering: crisp-edges;
 
-  $background: $background-selector;
-  $buildings-far: $buildings-far-selector;
-  $buildings-near: $buildings-near-selector;
+  $background: "#background";
+  $buildings-far: "#buildings-far";
+  $buildings-near: "#buildings-near";
 
   #{$background, $buildings-far, $buildings-near} {
     width: 100%;
@@ -67,6 +67,67 @@
 
   #{$buildings-near} {
     @include buildings-near;
+  }
+
+  #main-menu {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    #menu-building {
+      $multiplier: 1.5;
+      position: absolute;
+      right: 20%;
+      width: 232px * $multiplier;
+      height: 430px * $multiplier;
+      bottom: 20px;
+      background: url(images.$menu-building) no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+
+      #enter-sign {
+        position: absolute;
+        top: 85px * $multiplier;
+        left: 0;
+        width: 62px * $multiplier;
+        height: 239px * $multiplier;
+        background: url(images.$enter-sign) no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 5;
+        pointer-events: auto;
+
+        &:hover {
+          filter: brightness(1.5);
+          -webkit-box-shadow: 0 0 50px rgb(255, 248, 68);
+          box-shadow:         0 0 50px rgb(255, 248, 68);
+        }
+      }
+
+      #themes-sign, #themes-sign-blur {
+        pointer-events: auto;
+        position: absolute;
+        top: 8px * $multiplier;
+        left: 8px * $multiplier;
+        width: 160px * $multiplier;
+        height: 31px * $multiplier;
+        background: url(images.$themes-sign) no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      #themes-sign:hover {
+        filter: brightness(2);
+
+        & + #themes-sign-blur {
+         background-position: center right;
+         -webkit-box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
+         box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
+         filter: blur(10px);
+         z-index: -1;
+        }
+      }
+    }
   }
 }
 
