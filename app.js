@@ -11,7 +11,7 @@ const themes = {
   pixel: 'pixel',
 };
 
-const default_theme = 'simpledark';
+const default_theme = 'pixel';
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
