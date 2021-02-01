@@ -7,51 +7,27 @@
   </head>
   <body>
     <div id="scene">
-      <div id="main-menu" data-depth="0.1">
+      <div id="main-menu" data-depth-x="0.01" data-depth-y="3">
         <div id="menu-building">
-          <div id="enter-sign"></div>
-          <div id="themes-sign"></div>
+          <div id="enter-sign" class="lightable"></div>
+          <div id="themes-sign" class="lightable"></div>
           <div id="themes-sign-blur"></div>
         </div>
       </div>
-      <div id="background" data-depth="0.2"></div>
-      <div id="buildings-far" data-depth="0.6"></div>
-      <div id="buildings-near" data-depth="0.9"></div>
+      <div id="background" data-depth-x="0.4" data-depth-y="1"></div>
+      <div id="buildings-far" data-depth-x="0.8" data-depth-y="2"></div>
+      <div id="buildings-near" data-depth-x="1.2" data-depth-y="4"></div>
     </div>
     <div id="index-container" class="container">
       <div id="index-hero">
         <div id="hero-header" class="centered-vert text-center">
           <h1 class="header-title centered-hor">
-            SKANG.TECH
+            < SKANG.TECH >
           </h1>
           <h3 class="header-subtitle centered-hor">
-            <!-- THE QUEST FOR<br/>HALF-DECENT CODE -->
+            (steven kang)
           </h3>
         </div>
-<!-- ORIGINAL MENU ------------
-        <div id="hero-menu">
-          <div id="selections-container" class="container">
-            <ul class="selections no-bullet centered-hor">
-              <li class="selection">
-                <div class="selection-text centered-vert">
-                  ENTER PORTFOLIO
-                </div>
-              </li>
-              <li class="selection">
-                <div class="selection-text centered-vert">
-                  SELECT THEME
-                </div>
-              </li>
-              <li class="selection">
-                <div class="selection-text centered-vert">
-                  SETTINGS
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
------------------->
     </div>
     <script src="vendor/jquery.min.js"></script>
     <script src="vendor/parallax.min.js"></script>
