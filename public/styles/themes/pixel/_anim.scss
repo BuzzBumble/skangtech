@@ -1,0 +1,8 @@
+@keyframes colorpulse {
+    0% {
+        filter: brightness(1) saturate(1.2);
+    }
+    100% {
+        filter: brightness(1.2) saturate(1.5);
+    }
+}

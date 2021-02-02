@@ -7,8 +7,11 @@
 $container-padding: 16px;
 
 // _02 Media Query Sizes
+
+$bp_large_desktop: 1280px;
+
 $bp_desktop_min: 1024px;
-$bp_desktop_max: 1280px;
+$bp_desktop_max: $bp_large_desktop - 1;
 
 $bp_tablet_ls_min: 768px;
 $bp_tablet_ls_max: $bp_desktop_min - 1;

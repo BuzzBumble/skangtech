@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "dev": "node-dev app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "npx sass --watch public/styles/themes/pixel/:public/styles/css/"
   },
@@ -19,6 +19,8 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "easy-livereload": "^1.4.3",
+    "node-dev": "^6.2.0",
     "nodemon": "^2.0.7",
     "sass": "^1.32.5"
   }

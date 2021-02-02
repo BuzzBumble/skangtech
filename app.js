@@ -4,10 +4,36 @@ const app = express();
 const axios = require('axios');
 const favicon = require('serve-favicon');
 
+if (app.get('env') == 'development') {
+  console.log("asdf");
+  let livereload = require('easy-livereload');
+  var file_type_map = {
+    ejs: 'html',
+    css: 'css'
+  };
+
+  var file_type_regex = new RegExp('\\.(' + Object.keys(file_type_map).join('|') + ')$');
+  app.use(livereload({     
+    watchDirs: [
+      path.join(__dirname, 'public/styles/css'),
+      path.join(__dirname, 'views/pixel'),
+    ],
+    checkFunc: function(file) {
+      return file_type_regex.test(file);
+    },
+    renameFunc: function(file) {
+      return file.replace(file_type_regex, function(extention) {
+        return '.' + file_type_map[extention.slice(1)];
+      });
+    },
+    port : process.env.LIVERELOAD_PORT || 35729,
+  }));
+}
+
 const mediumURL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@s.kang919'
 
 const themes = {
-  simpledark: 'simple-dark',
+  "simple-dark": 'simple-dark',
   pixel: 'pixel',
 };
 
@@ -29,6 +55,7 @@ app.get('/', async (req, res) => {
       res.render(`${themes[theme]}/index`, {cards});
     });
 });
+
 
 app.listen(process.env.PORT || 8000, (err) => {
   if (err) {

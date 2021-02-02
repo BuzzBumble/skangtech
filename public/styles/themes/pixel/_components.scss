@@ -1,13 +1,15 @@
 @use 'images';
 @use 'anim';
-// Reusable components
+@use 'vars';
+@use 'desktop/desktop' as desktop;
+@use 'media';
 
 @mixin parallax-scene {
   position: absolute;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
   image-rendering: crisp-edges;
 
   $background: "#background";
@@ -17,22 +19,33 @@
   #{$background, $buildings-far, $buildings-near} {
     width: 100%;
     height: 100%;
+  }
+  
+  #{$background} {
+    @include skyline-background;
+    &.blurred {
+      filter: blur(10px);
+    }
+  }
+  
+  #{$buildings-far} {
+    @include buildings-far;
     &.blurred {
       filter: blur(5px);
     }
   }
 
-  #{$background} {
-    @include skyline-background;
-  }
-
-  #{$buildings-far} {
-    @include buildings-far;
-  }
-
   #{$buildings-near} {
     @include buildings-near;
+    &.blurred {
+      filter: blur(5px);
+    }
   }
+
+  @include main-menu;
+}
+
+@mixin main-menu {
 
   #main-menu {
     width: 100%;
@@ -41,90 +54,28 @@
     backface-visibility: hidden;
     transform-style: preserve-3d;
 
-
     #menu-building {
-      $multiplier: 1.6;
       position: absolute;
-      right: images.$menu-building-width * 2.5;
-      bottom: images.$menu-building-height * 0.7;
-      width: images.$menu-building-width * $multiplier;
-      height: images.$menu-building-height * $multiplier;
-      bottom: 0;
+      bottom: 5%;
       background: url(images.$menu-building) no-repeat;
       background-position: right bottom;
       background-size: contain;
       filter: brightness(1.2);
       pointer-events: auto;
-      transition: transform 0.25s ease-out;
 
-      &:hover {
-        transform: perspective(100px) scale(1.1, 1.1) translate(-75px,0px);
-      }
-
-      #enter-sign {
-        pointer-events: auto;
-        position: absolute;
-        top: images.$enter-sign-y-offset * $multiplier;
-        left: images.$enter-sign-x-offset * $multiplier;
-        width: images.$enter-sign-width * $multiplier;
-        height: images.$enter-sign-height * $multiplier;
-        background: url(images.$enter-sign) no-repeat;
-        background-position: center;
-        background-size: contain;
-        z-index: 5;
-
-        &:hover {
-          filter: brightness(1.5);
-          -webkit-box-shadow: 0 0 50px rgb(255, 248, 68);
-          box-shadow:         0 0 50px rgb(255, 248, 68);
-        }
-      }
-
-      #themes-sign, #themes-sign-blur {
-        position: absolute;
-
-        width: images.$themes-sign-width * $multiplier;
-        left: images.$themes-sign-width / 20 * $multiplier;
-
-        height: images.$themes-sign-height * $multiplier;
-        top: images.$themes-sign-height / 4 * $multiplier;
-
-        background: url(images.$themes-sign) no-repeat;
-        background-position: center;
-        background-size: contain;
-
-        z-index: 5;
-      }
-
-      #themes-sign {
-        pointer-events: auto;
-      }
-
-      #themes-sign-blur {
-        pointer-events: none;
-      }
-
-      #themes-sign:hover {
-        filter: brightness(2) !important;
-
-        & + #themes-sign-blur {
-          background-position: center right !important;
-          -webkit-box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
-          box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
-          filter: blur(10px);
-        }
-      }
-
-
+      @include enter-sign;
     }
   }
+  @include media.main-menu-dimensions;
 }
 
 @mixin skyline-background {
   background: url(images.$bg_skyline_a) repeat-x;
-  background-position: center 120%;
+  background-position: center 180%;
+  animation: colorpulse alternate infinite 10s ease-in-out;
   background-size: auto 120%;
   background-color: #031B70;
+  filter: blur(10px);
 }
 
 @mixin buildings-far {
@@ -136,7 +87,54 @@
 
 @mixin buildings-near {
   background: url(images.$bg_buildings_near) repeat-x;
-  background-position: center 100%;
+  background-position: center 140%;
   background-size: auto 70%;
   filter: blur(1px);
+}
+
+@mixin enter-sign {
+  #enter-sign {
+    pointer-events: auto;
+    position: absolute;
+    background: url(images.$enter-sign) no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 5;
+
+    &:hover {
+      filter: brightness(1.5) blur(1.5px) saturate(3);
+      -webkit-box-shadow: 0 0 50px rgb(255, 248, 68);
+      box-shadow:         0 0 50px rgb(255, 248, 68);
+    }
+  }
+}
+
+@mixin themes-sign {
+  #themes-sign, #themes-sign-blur {
+    position: absolute;
+    background: url(images.$themes-sign) no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    z-index: 5;
+  }
+
+  #themes-sign {
+    pointer-events: auto;
+  }
+
+  #themes-sign-blur {
+    pointer-events: none;
+  }
+
+  #themes-sign:hover {
+    filter: brightness(2) !important;
+
+    & + #themes-sign-blur {
+      background-position: center right !important;
+      -webkit-box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
+      box-shadow: 0 0 10px 5px #ff4fa7, inset 0 0 40px #ff4fa7;
+      filter: blur(10px);
+    }
+  }
 }
