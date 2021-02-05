@@ -229,7 +229,7 @@ body:hover {
   height: 100%;
   display: grid;
   grid-template-columns: [hero-col-start] 14em auto;
-  grid-template-rows: 2fr [hero-row-start] 1fr 4fr;
+  grid-template-rows: 2fr [hero-row-start] 1fr [desc-row-start] 1fr 4fr;
 }
 #index-container #index-hero {
   font-family: "04B_03";
@@ -237,7 +237,10 @@ body:hover {
   grid-column-start: hero-col-start;
   justify-self: start;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+#index-container #index-hero #hero-header {
+  grid-row-start: 2;
 }
 #index-container #index-hero #hero-header .header-title {
   font-size: 1em;
@@ -262,6 +265,10 @@ body:hover {
     -webkit-text-stroke-width: 0.03em;
     -webkit-text-stroke-color: aqua;
   }
+}
+#index-container #index-hero #header-desc {
+  grid-row-start: 3;
+  margin: auto 0;
 }
 
 /*# sourceMappingURL=pixel.css.map */

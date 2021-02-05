@@ -1,5 +1,6 @@
 var path = require('path');
 var express = require('express');
+let fs = require('fs');
 const app = express();
 const axios = require('axios');
 const favicon = require('serve-favicon');
@@ -54,6 +55,36 @@ app.get('/', async (req, res) => {
       cards = [];
       res.render(`${themes[theme]}/index`, {cards});
     });
+});
+
+app.get('/COMP4537/labs/4/writeFile/:file', async (req, res) => {
+   const text = req.query.text + '\n';
+   const file = req.params.file;
+   try {
+     fs.writeFileSync(file, text, {encoding: 'utf8', flag: 'a+'});
+   } catch (err) {
+    if (err.code == 'ENOENT') {
+      res.status(404).send (`${err}\n File ${file} not found.`);
+    }
+     res.status(404).send(`${err}\nCould not write to file: ${file}`);
+     return;
+   }
+   res.status(200).send("Success");
+});
+
+app.get('/COMP4537/labs/4/readFile/:file', async (req, res) => {
+  const file = req.params.file;
+  let text;
+  try {
+    text = fs.readFileSync(file, { encoding: 'utf8', flag: 'r' });
+  } catch (err) {
+    if (err.code == 'ENOENT') {
+      res.status(404).send (`${err}\n File ${file} not found.`);
+    }
+    res.status(404).send(`${err}\n File ${file} could not be read.`);
+    return;
+  }
+  res.status(200).send(text);
 });
 
 

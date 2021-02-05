@@ -37,8 +37,7 @@ body {
 
   display: grid;
   grid-template-columns: [hero-col-start] 14em auto;
-
-  grid-template-rows: 2fr [hero-row-start] 1fr 4fr;
+  grid-template-rows: 2fr [hero-row-start] 1fr [desc-row-start] 1fr 4fr;
 
   #index-hero {
     @include fonts.f_04b03;
@@ -48,9 +47,10 @@ body {
     justify-self: start;
 
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
     #hero-header {
+      grid-row-start: 2;
 
       .header-title {
         font-size: 1em;
@@ -73,6 +73,11 @@ body {
           -webkit-text-stroke-color: aqua;
         }
       }
+    }
+
+    #header-desc {
+      grid-row-start: 3;
+      margin: auto 0;
     }
   }
 }
