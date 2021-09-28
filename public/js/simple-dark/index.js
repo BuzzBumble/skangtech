@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
   var options1 = {
-    strings: ["Full-Stack Developer",
-      "Software Engineer",
-      "Aspiring Creator",
-      "Wanna-Be Designer"],
+    strings: ["Software Engineer",
+      "Full-Stack Web Developer",
+      "Compulsive Learner",
+      "Bouldering Addict",
+      "Video Game Enthusiast"],
     typeSpeed: 60,
     backSpeed: 30,
     backDelay: 1000,

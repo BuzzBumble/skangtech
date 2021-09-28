@@ -19,7 +19,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async (req, res) => {
-  const theme = req.query.theme ? req.query.theme : default_theme;
+  //const theme = req.query.theme ? req.query.theme : default_theme;
+  const theme = default_theme;
   let cards;
   axios.get(mediumURL)
     .then((data) => {
